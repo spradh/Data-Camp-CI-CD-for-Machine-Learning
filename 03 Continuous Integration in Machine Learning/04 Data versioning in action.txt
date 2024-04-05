@@ -1,0 +1,33 @@
+repl:~/workspace$ dvc init
+Initialized DVC repository.
+
+You can now commit the changes to git.
+
++---------------------------------------------------------------------+
+|                                                                     |
+|        DVC has enabled anonymous aggregate usage analytics.         |
+|     Read the analytics documentation (and how to opt-out) here:     |
+|             <https://dvc.org/doc/user-guide/analytics>              |
+|                                                                     |
++---------------------------------------------------------------------+
+
+What's next?
+------------
+- Check out the documentation: <https://dvc.org/doc>
+- Get help and share ideas: <https://dvc.org/chat>
+- Star us on GitHub: <https://github.com/iterative/dvc>
+repl:~/workspace$ ls
+dataset.csv
+repl:~/workspace$ dvc add dataset.csv
+100% Adding...|████████████████████████████████████|1/1 [00:00, 22.77file/s]
+                                                                            
+To track the changes with git, run:
+
+        git add dataset.csv.dvc .gitignore
+
+To enable auto staging, run:
+
+        dvc config core.autostage true
+repl:~/workspace$ find .dvc/cache -type f
+.dvc/cache/e6/02b116f50269aa781c0c910cd80db9
+repl:~/workspace$ 
