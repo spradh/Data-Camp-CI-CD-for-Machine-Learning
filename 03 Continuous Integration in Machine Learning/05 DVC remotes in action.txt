@@ -1,0 +1,18 @@
+repl:~/workspace$ dvc remote add -d --local myremote /tmp/dvc/localremote
+Setting 'myremote' as a default remote.
+repl:~/workspace$ ls /tmp/dvc/localremote
+ls: cannot access '/tmp/dvc/localremote': No such file or directory
+repl:~/workspace$ ls
+dataset.csv  dataset.csv.dvc
+repl:~/workspace$ cat .dvc/confot.local
+cat: .dvc/confot.local: No such file or directory
+repl:~/workspace$ cat .dvc/config.local
+[core]
+    remote = myremote
+['remote "myremote"']
+    url = /tmp/dvc/localremote
+repl:~/workspace$ dvc push
+1 file pushed                                                                      
+repl:~/workspace$ dvc pull                                                         
+Everything is up to date.                                                          
+repl:~/workspace$ 
