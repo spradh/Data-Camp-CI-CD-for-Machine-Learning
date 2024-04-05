@@ -1,4 +1,4 @@
-repl:~/workspace$ dvc stage add -n print -d print.sh -o pages ./print/sh
+repl:~/workspace$ dvc stage add -n print -d print.sh -o pages ./print.sh
 Added stage 'print' in 'dvc.yaml'
 
 To track the changes with git, run:
