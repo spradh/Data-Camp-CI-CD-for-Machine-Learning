@@ -1,0 +1,29 @@
+repl:~/workspace$ dvc stage add -n print -d print.sh -o pages ./print/sh
+Added stage 'print' in 'dvc.yaml'
+
+To track the changes with git, run:
+
+        git add dvc.yaml .gitignore
+
+To enable auto staging, run:
+        dvc config core.autostage true
+repl:~/workspace$ dvc stage add -n scan -d scan.sh -d pages -o signed.pdf ./scan.sh
+Added stage 'scan' in 'dvc.yaml'
+
+To track the changes with git, run:
+
+        git add dvc.yaml .gitignore
+
+To enable auto staging, run:
+
+        dvc config core.autostage true
+repl:~/workspace$ dvc dag
++-------+  
+| print |  
++-------+  
+    *      
+    *      
+    *      
++------+   
+| scan |   
+/tmp/tmppptabexj/pydoc.out
