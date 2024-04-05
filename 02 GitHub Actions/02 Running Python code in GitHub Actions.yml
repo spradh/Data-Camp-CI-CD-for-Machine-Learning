@@ -15,7 +15,7 @@ jobs:
 
       # Setup Python to 3.9 using setup-python action
       - name: Setup Python
-        uses: actions/setup-python3@v4
+        uses: actions/setup-python@v4
         with:
           python-version: 3.9
 
